@@ -12,6 +12,7 @@ export class CalculadoraComponent implements OnInit {
   faCoffee = faUserFriends;
   faPeso = faDollarSign;
   model=new Calculo(0,0,1,0,0,0);
+  error= false;
 
   constructor() { }
 
@@ -20,14 +21,18 @@ export class CalculadoraComponent implements OnInit {
 
   sumar()
   {
-    var totalComida:number= Number(this.model.total);
-    var propina:number=Number(this.model.propina);
-    var npersonas:number= Number(this.model.nPersonas);
-
-    var totalPropina:number =  (totalComida * propina)/100;
-    this.model.tPropina = totalPropina;
-    this.model.perPropina =totalPropina / npersonas;
-    this.model.cuentaPagar=totalComida + totalPropina;
+    if(this.error==false)
+    {
+      var totalComida:number= Number(this.model.total);
+      var propina:number=Number(this.model.propina);
+      var npersonas:number= Number(this.model.nPersonas);
+  
+      var totalPropina:number =  (totalComida * propina)/100;
+      this.model.tPropina = totalPropina;
+      this.model.perPropina =totalPropina / npersonas;
+      this.model.cuentaPagar=totalComida + totalPropina;
+    }
+     
       
   }
 
@@ -47,5 +52,17 @@ export class CalculadoraComponent implements OnInit {
     this.model.perPropina =0;
     this.model.cuentaPagar=0;
     (<HTMLInputElement>document.getElementById("porPersonalizado")).value="";
+  }
+
+  verificar()
+  {
+    if(this.model.nPersonas==0)
+    {
+      this.error=true
+      return true;
+    }else{
+      this.error=false
+      return false
+    }
   }
 }

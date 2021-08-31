@@ -68,3 +68,8 @@ body{
         border-color: #1c3b4e;
         background-color: #EDEDED;
     }
+
+    .inputCambio{
+        unicode-bidi:embed; 
+        direction: RTL; 
+    }

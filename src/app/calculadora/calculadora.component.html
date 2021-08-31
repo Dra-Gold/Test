@@ -19,7 +19,7 @@
                                         <div class="col-11 ">
                                             <div class="intento movDere">
                                                 <fa-icon [icon]="faPeso"></fa-icon>
-                                                <input type="text" [(ngModel)]="model.total" dir="rtl" (change)="sumar()"  class="form-control mt-1 font-semibold border-input rounded-0"> 
+                                                <input type="text" [(ngModel)]="model.total" (change)="sumar()"  class="form-control mt-1 font-semibold border-input rounded-0 inputCambio"> 
                                             </div>
                                         </div>    
                                         
@@ -55,7 +55,8 @@
                                         <div class="col-12 ">
                                             <div class="intento movDere">
                                                 <fa-icon [icon]="faCoffee"></fa-icon>
-                                                <input type="text" [(ngModel)]="model.nPersonas" dir="rtl" (change)="sumar()" class="form-control font-semibold border-input rounded-0"> 
+                                                <input type="text" [(ngModel)]="model.nPersonas"  (change)="sumar()" class="form-control font-semibold border-input rounded-0 inputCambio"> 
+                                                <div class="error font-semibold" *ngIf="verificar()" >Error el valor no puede ser 0</div>
                                             </div>
                                         </div>
                                         

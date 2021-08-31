@@ -14,3 +14,10 @@
 .movDere input{
     padding-right:  35px;
 }
+
+.intento .error{
+    position: relative;
+    top: -70px;
+    float: right;
+    color :#AE3A3A;
+}
