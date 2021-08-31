@@ -1,0 +1,16 @@
+.intento{
+    position: relative;
+}
+
+.intento .ng-fa-icon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+.movDere .ng-fa-icon{
+    left:  0px;
+}
+
+.movDere input{
+    padding-right:  35px;
+}

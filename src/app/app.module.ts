@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
   imports: [
     BrowserModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

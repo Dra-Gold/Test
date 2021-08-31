@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Calculo } from '../calculo';
+import { faDollarSign, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-calculadora',
   templateUrl: './calculadora.component.html',
@@ -7,6 +9,8 @@ import { Calculo } from '../calculo';
 })
 export class CalculadoraComponent implements OnInit {
 
+  faCoffee = faUserFriends;
+  faPeso = faDollarSign;
   model=new Calculo(0,0,1,0,0,0);
 
   constructor() { }
