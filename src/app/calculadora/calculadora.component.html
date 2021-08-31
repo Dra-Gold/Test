@@ -1,0 +1,85 @@
+<div class="containter">
+    <div class="row ">
+        <div class="col-2 d-none d-sm-block"></div>
+        <div class="col-lg-8 col-md-12">
+            <div class="imagenPer mx-auto d-block"></div>
+        </div>
+        <div class="col-2 d-none d-sm-block"></div>
+    </div>
+    <div class="row ">
+        <div class="col-2 d-none d-sm-block"></div>
+            <div class="col-lg-8 col-md-12 ">
+                <div class="row">
+                    <div class="col-12 text-black personalizado">
+                       <div class="row m-5">
+                           <div class="col-lg-6 col-md-12 ">
+                               <div class="row">
+                                   <div class="col-12">
+                                        <label class="form-label font-semibold">Total de la cuenta  </label>
+                                        <input type="text" [(ngModel)]="model.total" (change)="sumar()"  class="form-control mt-1 font-semibold border-input rounded-0"> 
+                                   </div>
+                                   <div class="col-12 mt-3 ">
+                                            <label class="font-semibold">Seleccione la cantidad de propina %</label>
+                                            <div class="row mt-2 text-center">
+                                                <div class="col-4 text-start">
+                                                    <button type="button" (click)="asignar($event)" value="5" class="btn fondoBotones col-9 rounded-0 font-semibold" >5%</button>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="button" (click)="asignar($event)" value="10" class="btn fondoBotones col-9 rounded-0 font-semibold" >10%</button>
+                                                </div>
+                                                <div class="col-4 ">
+                                                    <button type="button" (click)="asignar($event)" value="15" class="btn fondoBotones col-9 rounded-0 font-semibold" >15%</button>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3 text-center">
+                                                <div class="col-4 text-start">
+                                                    <button type="button" (click)="asignar($event)" value="25" class="btn fondoBotones col-9 rounded-0 font-semibold" >25%</button>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button type="button" (click)="asignar($event)" value="50" class="btn fondoBotones col-9 rounded-0 font-semibold" >50%</button>
+                                                </div>
+                                                <div class="col-4 ">
+                                                    <input type="text" id="porPersonalizado" (change)="asignar($event)" class="btn col-9 fondoBoton rounded-0 font-semibold" placeholder="Ingrese %">
+                                                    
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="col-12 mt-4 mb-4">
+                                        <label class="form-label font-semibold">Numero de personas</label>
+                                        <input type="text" [(ngModel)]="model.nPersonas" (change)="sumar()" class="form-control font-semibold border-input rounded-0"> 
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="col-lg-6 col-md-12 secundario">
+                                <div class="row m-1">
+                                    <div class="col-12">
+                                        <div class="row mt-5">
+                                            <div class="col-8 text-start font-semibold">Propina por Persona</div>
+                                            <div class="col-4 text-end font-bold">{{model.perPropina | currency:'CLP':'symbol-narrow'}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row mt-4">
+                                            <div class="col-8 text-start font-semibold">Propina Total</div>
+                                            <div class="col-4 text-end font-bold">{{model.tPropina | currency:'CLP':'symbol-narrow'}}</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row mt-5">
+                                            <div class="col-8 text-start font-semibold">Cuenta + Propina</div>
+                                            <div class="col-4 text-end font-bold">{{model.cuentaPagar | currency:'CLP':'symbol-narrow'}} </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mt-5">
+                                        <div class="mt-4"></div>
+                                        <button type="button" (click)="limpiar()" class="btn fondoLimpiar col-12 rounded-0 font-semibold" >Limpiar</button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-2 d-none d-sm-block"></div>
+    </div>
+</div>

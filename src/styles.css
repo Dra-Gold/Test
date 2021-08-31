@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #1c3b4e;
+    margin: 0;
+    font-family: 'Raleway';
+    }
+.personalizado{  
+    background-color: #FFFFFF; 
+    }
+    
+    .fondoBoton{
+        background-color: #EDEDED; 
+    }
+
+    .fondoBotones{
+        background-color: #3F6E8A; 
+        color: #EDEDED;
+    }
+
+    .fondoLimpiar{
+        background-color: #EDEDED; 
+        color: #3F6E8A;
+    }
+
+    .secundario{
+        background-color: #1c3b4e;
+        color: #FFFFFF;
+    }
+    
+    .imagenPer{
+        content: url("./assets/Logo-litiobyte-blanco.svg");
+        width: 375px;
+       height: 100px;
+    }
+    
+    .fill { 
+        min-height: 100vh;
+        height: 100vh;
+    }
+    
+    html {
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    }
+    
+    .centerBlock {
+        display: table;
+        margin: auto;
+      }
+
+      .font-bold{
+          font-weight: 700;
+      }
+
+      .font-semibold{
+        font-weight: 600;
+    }
+
+    .border-input{
+        border-color: #1c3b4e;
+    }
